@@ -1,0 +1,10 @@
+Flask
+numpy
+requests
+pytesseract
+pillow
+pymupdf
+python-docx
+scikit-learn
+opencv-python
+python-pptx

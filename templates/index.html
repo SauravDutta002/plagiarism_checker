@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plagiarism Checker</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="title">🔍 Plagiarism Checker</h2>
+
+      <!-- Text Input Section -->
+      <div class="box">
+        <h3 class="subtitle">Enter Text</h3>
+        <form method="POST" class="text-form">
+          <textarea
+            name="text"
+            class="input-text"
+            rows="5"
+            placeholder="Paste your text here..."
+          ></textarea>
+          <button type="submit" class="neon-btn">Check Text</button>
+        </form>
+      </div>
+
+      <!-- File Upload Section -->
+      <div class="box">
+        <h3 class="subtitle">Upload File (PDF, DOCX, Image , PPTX)</h3>
+        <form method="POST" enctype="multipart/form-data" class="file-form">
+          <input
+            type="file"
+            name="file"
+            class="file-input"
+            accept=".pdf, .docx, .png, .jpg, .jpeg ,.pptx"
+          />
+          <button type="submit" class="neon-btn">Check File</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

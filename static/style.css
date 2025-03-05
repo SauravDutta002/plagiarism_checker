@@ -1,0 +1,126 @@
+/* Import Futuristic Font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    background: radial-gradient(circle, #03001e 10%, #050230 90%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Main Container */
+.container {
+    width: 420px;
+    text-align: center;
+}
+
+/* Title */
+.title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #00eaff;
+    text-shadow: 0px 0px 8px #00eaff;
+    margin-bottom: 20px;
+}
+
+/* Box for each section */
+.box {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 234, 255, 0.6);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 234, 255, 0.4);
+    margin-bottom: 20px;
+}
+
+/* Subtitle */
+.subtitle {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #ff00ff;
+    text-shadow: 0px 0px 5px #ff00ff;
+}
+
+/* Input Fields */
+.input-text, .file-input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    outline: none;
+    transition: 0.3s;
+    resize: none;
+}
+
+.input-text::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.input-text:focus {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.02);
+}
+
+/* File Upload */
+.file-input {
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Futuristic Neon Button */
+.neon-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #00eaff, #ff00ff);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    margin-top: 15px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 234, 255, 0.7);
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Button Hover Effect */
+.neon-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6);
+}
+
+/* Neon Glow Animation */
+@keyframes neonGlow {
+    0% {
+        box-shadow: 0px 0px 5px rgba(0, 234, 255, 0.7);
+    }
+    50% {
+        box-shadow: 0px 0px 15px rgba(255, 0, 255, 0.7);
+    }
+    100% {
+        box-shadow: 0px 0px 5px rgba(0, 234, 255, 0.7);
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 500px) {
+    .container {
+        width: 100%;
+    }
+}

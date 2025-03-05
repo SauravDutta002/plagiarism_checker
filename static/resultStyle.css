@@ -1,0 +1,137 @@
+/* Import Futuristic Font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    background: radial-gradient(circle, #03001e 10%, #050230 90%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Main Result Container */
+.result-container {
+    width: 450px;
+    text-align: center;
+}
+
+/* Title */
+.title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #00eaff;
+    text-shadow: 0px 0px 8px #00eaff;
+    margin-bottom: 20px;
+}
+
+/* Result Box */
+.result-box {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 234, 255, 0.6);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 234, 255, 0.4);
+    margin-bottom: 20px;
+    height: auto;
+    max-height: 40vh;
+    overflow-y: scroll;
+}
+
+/* Text Styling */
+.text, .percentage {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Highlight Percentage */
+.highlight {
+    color: #ff00ff;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px #ff00ff;
+}
+
+/* Subtitle */
+.subtitle {
+    font-size: 16px;
+    font-weight: 500;
+    color: #ff00ff;
+    text-shadow: 0px 0px 5px #ff00ff;
+    margin-bottom: 10px;
+}
+
+/* Source List */
+.source-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Source Item */
+.source-item {
+    font-size: 14px;
+    margin: 8px 0;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px;
+    border-radius: 6px;
+}
+
+/* No Source Found */
+.no-source {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Neon Links */
+.neon-link {
+    color: #00eaff;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px #00eaff;
+    transition: 0.3s;
+}
+
+.neon-link:hover {
+    color: #ff00ff;
+    text-shadow: 0px 0px 10px #ff00ff;
+}
+
+/* Futuristic Neon Button */
+.neon-btn {
+    display: inline-block;
+    padding: 12px;
+    background: linear-gradient(90deg, #00eaff, #ff00ff);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    margin-top: 15px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 234, 255, 0.7);
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+/* Button Hover Effect */
+.neon-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6);
+}
+
+/* Mobile Responsive */
+@media (max-width: 500px) {
+    .result-container {
+        width: 100%;
+    }
+}
+
+

@@ -1,126 +1,160 @@
-/* Import Futuristic Font */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background: radial-gradient(circle, #03001e 10%, #050230 90%);
-    color: white;
+    background: linear-gradient(135deg, #0b0c28, #200c3a);
+    color: #fff;
+}
+
+/* Header */
+header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
-    padding: 20px;
+    padding: 15px 50px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Main Container */
-.container {
-    width: 420px;
-    text-align: center;
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
 }
 
-/* Title */
-.title {
-    font-size: 22px;
-    font-weight: 700;
-    color: #00eaff;
-    text-shadow: 0px 0px 8px #00eaff;
-    margin-bottom: 20px;
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
-/* Box for each section */
-.box {
-    background: rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(0, 234, 255, 0.6);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0, 234, 255, 0.4);
-    margin-bottom: 20px;
-}
-
-/* Subtitle */
-.subtitle {
-    font-size: 16px;
-    font-weight: 500;
-    margin-bottom: 10px;
-    color: #ff00ff;
-    text-shadow: 0px 0px 5px #ff00ff;
-}
-
-/* Input Fields */
-.input-text, .file-input {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    font-size: 14px;
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    outline: none;
+nav ul li a {
+    text-decoration: none;
+    color: #bbb;
     transition: 0.3s;
-    resize: none;
 }
 
-.input-text::placeholder {
-    color: rgba(255, 255, 255, 0.6);
+nav ul li a:hover {
+    color: #fff;
 }
 
-.input-text:focus {
-    background: rgba(255, 255, 255, 0.2);
-    transform: scale(1.02);
+/* Buttons */
+.buttons {
+    display: flex;
+    gap: 15px;
 }
 
-/* File Upload */
-.file-input {
+.login-btn, .signup-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    padding: 10px;
+    font-weight: bold;
 }
 
-/* Futuristic Neon Button */
-.neon-btn {
-    width: 100%;
-    padding: 12px;
-    background: linear-gradient(90deg, #00eaff, #ff00ff);
+.login-btn {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.login-btn:hover {
+    background: #fff;
+    color: #0b0c28;
+}
+
+.signup-btn {
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
     color: white;
+    box-shadow: 0 0 15px #ff416c;
+}
+
+.signup-btn:hover {
+    box-shadow: 0 0 25px #ff416c;
+    transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ff416c;
+}
+
+.description {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 15px auto;
+    color: #bbb;
+}
+
+/* Upload Box */
+.upload-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px auto;
+    width: 400px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.upload-box h3 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.file-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.file-input {
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+}
+
+.file-input:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Upload Button */
+.upload-btn {
+    margin-top: 15px;
+    padding: 12px 25px;
     font-size: 16px;
     font-weight: bold;
     border: none;
-    border-radius: 8px;
-    margin-top: 15px;
+    border-radius: 5px;
     cursor: pointer;
-    box-shadow: 0px 0px 10px rgba(0, 234, 255, 0.7);
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    color: white;
     transition: 0.3s;
-    position: relative;
-    overflow: hidden;
+    box-shadow: 0 0 10px #ff416c;
 }
 
-/* Button Hover Effect */
-.neon-btn:hover {
+.upload-btn:hover {
+    box-shadow: 0 0 20px #ff4b2b;
     transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6);
-}
-
-/* Neon Glow Animation */
-@keyframes neonGlow {
-    0% {
-        box-shadow: 0px 0px 5px rgba(0, 234, 255, 0.7);
-    }
-    50% {
-        box-shadow: 0px 0px 15px rgba(255, 0, 255, 0.7);
-    }
-    100% {
-        box-shadow: 0px 0px 5px rgba(0, 234, 255, 0.7);
-    }
-}
-
-/* Mobile Responsive */
-@media (max-width: 500px) {
-    .container {
-        width: 100%;
-    }
 }

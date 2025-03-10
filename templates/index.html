@@ -10,34 +10,60 @@
     />
   </head>
   <body>
-    <div class="container">
-      <h2 class="title">🔍 Plagiarism Checker</h2>
-
-      <!-- Text Input Section -->
-      <div class="box">
-        <h3 class="subtitle">Enter Text</h3>
-        <form method="POST" class="text-form">
-          <textarea
-            name="text"
-            class="input-text"
-            rows="5"
-            placeholder="Paste your text here..."
-          ></textarea>
-          <button type="submit" class="neon-btn">Check Text</button>
-        </form>
+    <header>
+      <div class="logo">Plag</div>
+      <nav>
+        <ul>
+          <li>
+            <a href="https://innovatezprojects.netlify.app/" target="_blank"
+              >Pricing</a
+            >
+          </li>
+          <li>
+            <a href="https://innovatezprojects.netlify.app/" target="_blank"
+              >AI Detector</a
+            >
+          </li>
+          <li>
+            <a href="https://innovatezprojects.netlify.app/" target="_blank"
+              >Plagiarism Checker</a
+            >
+          </li>
+          <li>
+            <a href="https://innovatezprojects.netlify.app/" target="_blank"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a href="https://innovatezprojects.netlify.app/" target="_blank"
+              >Learn</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="buttons">
+        <button class="login-btn">Log In</button>
+        <button class="signup-btn">Start Free Trial</button>
       </div>
+    </header>
 
-      <!-- File Upload Section -->
-      <div class="box">
-        <h3 class="subtitle">Upload File (PDF, DOCX, Image , PPTX)</h3>
+    <div class="hero-section">
+      <h1 class="title">AI-Powered Plagiarism Checker</h1>
+      <p class="description">
+        Instantly check for plagiarism in documents, blog posts, and social
+        media content. Upload your file and get accurate results in seconds.
+      </p>
+
+      <div class="upload-box">
+        <h3>Upload File (PDF, DOCX, PPTX, Images)</h3>
         <form method="POST" enctype="multipart/form-data" class="file-form">
           <input
             type="file"
             name="file"
             class="file-input"
-            accept=".pdf, .docx, .png, .jpg, .jpeg ,.pptx"
+            accept=".pdf, .docx, .pptx, .png, .jpg, .jpeg"
           />
-          <button type="submit" class="neon-btn">Check File</button>
+          <button type="submit" class="upload-btn">Check File</button>
         </form>
       </div>
     </div>

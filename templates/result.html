@@ -1,44 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plagiarism Result</title>
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='resultStyle.css') }}"
-    />
-  </head>
-  <body>
-    <div class="result-container">
-      <h2 class="title">🔍 Plagiarism Result</h2>
+    <link rel="stylesheet" href="{{ url_for('static', filename='resultStyle.css') }}">
+</head>
+<body>
+    <div class="main-container">
+      
+        <div class="left-panel">
+            <h2 class="title">Plagiarism Result</h2>
 
-      <div class="result-box">
-        <p class="text">
-          <strong>📄 Input Text:</strong>
-          <span class="result-text">{{ text }}</span>
-        </p>
-      </div>
-      <p class="percentage">
-        <strong>⚠️ Plagiarism Percentage:</strong>
-        <span class="highlight">{{ plagiarism_percentage }}%</span>
-      </p>
+            <div class="result-box">
+                <p class="result-text">{{ text }}</p>
+            </div>
 
-      <h3 class="subtitle">🔗 Matching Sources</h3>
-      <ul class="source-list">
-        {% if sources %} {% for source in sources %}
-        <li class="source-item">
-          <strong>{{ source.text }}</strong>
-          <a href="{{ source.url }}" target="_blank" class="neon-link"
-            >[View Source]</a
-          >
-        </li>
-        {% endfor %} {% else %}
-        <li class="no-source">No matching sources found</li>
-        {% endif %}
-      </ul>
+         
+            <div class="percentage-container">
+                <p class="percentage-title"><strong>Plagiarism Percentage:</strong></p>
+                <div class="progress-ring-container">
+                    <svg class="progress-ring" width="150" height="150" viewBox="0 0 100 100">
+                        <circle class="progress-ring-bg" cx="50" cy="50" r="45"></circle>
+                        <circle id="progress-circle" class="progress-ring-fill" cx="50" cy="50" r="45"
+                            stroke-dasharray="282.6"
+                            stroke-dashoffset="282.6">
+                        </circle>
+                        <text x="50%" y="50%" text-anchor="middle" class="percentage-text" id="percentage-text" style="transform: rotate(90deg); transform-origin: center;" >
+                            0%
+                        </text>
+                    </svg>
+                </div>
+            </div>
 
-      <a href="/" class="neon-btn">🔄 Check Another</a>
+            <a href="/" class="neon-btn">Check Another</a>
+        </div>
+
+       
+        <div class="right-panel">
+            <h3 class="subtitle">Matching Sources</h3>
+            <ul class="source-list">
+                {% if sources %} 
+                    {% for source in sources %}
+                    <li class="source-item">
+                        <strong>{{ source.text }}</strong>
+                        <a href="{{ source.url }}" target="_blank" class="neon-link">[View Source]</a>
+                    </li>
+                    {% endfor %} 
+                {% else %}
+                    <li class="no-source">No matching sources found</li>
+                {% endif %}
+            </ul>
+        </div>
     </div>
-  </body>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let percentage = {{ plagiarism_percentage }};
+            let circle = document.getElementById("progress-circle");
+            let text = document.getElementById("percentage-text");
+
+            let progress = 282.6 - (282.6 * percentage / 100);
+
+            circle.style.transition = "stroke-dashoffset 1.5s ease-in-out";
+            circle.style.strokeDashoffset = progress;
+
+            let count = 0;
+            let interval = setInterval(() => {
+                if (count >= percentage) {
+                    clearInterval(interval);
+                } else {
+                    count++;
+                    text.textContent = count + "%";
+                }
+            }, 15);
+        });
+    </script>
+</body>
 </html>

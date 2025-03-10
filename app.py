@@ -12,7 +12,8 @@ from pptx import Presentation
 
 app = Flask(__name__)
 
-SERP_API_KEY = "c827578ca2241ad2e587c7dff8b97bd7eff06dd192d297e72e8a86fb4e9c7fd9"  
+SERP_API_KEY = "PASTE API HERE "  
+  
 
 def search_online_sources(query):
     """Fetch matching sources from the internet using SerpAPI."""
